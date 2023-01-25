@@ -1,0 +1,64 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Card -->
+
+<!-- #CodePenChallenge: Reflections -->
+<div class="top">
+  <div class="columns">
+    <div class="column is-full featured_wrapper p-0">
+      <img
+        src="https://wallpaperaccess.com/full/17350.jpg" style="width: 100%;"
+        class="featured">
+      <div class="title_wrapper">
+        <span  class="has-text-white"><strong>Trending Today</strong></span>
+        <h1 class="title is-1 has-text-white"><strong>ONE PIECE</strong></h1>
+        <button class="button1 is-medium">Watch It Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="columns is-multiline p-0 pt-6 last">
+    <div class="column is-full">
+      <p class="has-text-white">Anime Collection</p>
+    </div>
+    <div class="column is-one-quarter">
+      <!-- Card -->
+      <section class="py-5">
+        <div class="p3">
+          <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+              <div *ngFor="let animie of allanimie | filter:searchterm:'title'" class=" col mb-5">
+                <div class="card h-100 align-items-center">
+                  <!-- Product image-->
+                  <img class="card-img-top" [src]="animie.img" alt="..." width="200" height="300" />
+                  <!-- Product details-->
+                  <div class="card-body p-4">
+                    <div class="text-center">
+                      <!-- Product name-->
+                      <h5 class="fw-bolder">{{animie.name}}</h5>
+                      <!-- Product price-->
+                      ⭐{{animie.Rating}}
+                    </div>
+                  </div>
+                  <!-- Product actions-->
+                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center">
+
+                      <button  class="btn btn-outline-success mt-auto">About</button> &nbsp; &nbsp; &nbsp;
+
+                      <button (click)="addtowatchlist(manga)" class="btn btn-outline-danger mt-auto"><i
+                          class="fa-sharp fa-solid fa-bookmark"></i></button>
+                      
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+
+<div class="" style="width: 500px; height: 500px;">
+  <section class='login' id='login'>
+    <div class='head'>
+    <h1 class='company'>Animix</h1>
+    </div>
+    <p class='msg'>Welcome back</p>
+    <div class='form'>
+      <form [formGroup]="loginForm">
+        <p *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched" style="color: red;">Invalid Account Number</p>
+        <input formControlName="acno" type="text" placeholder='Username' class='text' id='username' required><br>
+        <p *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" style="color: red;">Invalid password</p>
+        <input formControlName="pswd" type="password" placeholder='••••••••••••••' class='password'><br>
+        <button class='btn-login' id='do-login' (click)="login()">Login</button>&nbsp; &nbsp;
+        <a class='btn-login' id='do-login' routerLink="/register">Register</a>
+        <a class='forgot'>Forgot?</a>
+      </form>
+    </div>
+  </section>
+</div>
+
+
+

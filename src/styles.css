@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+.card-img-top:hover {
+
+  transform: scale(1.08);
+  background-color: black;
+  transition: .5s;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
