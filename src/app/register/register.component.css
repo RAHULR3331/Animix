@@ -4,6 +4,17 @@ body {
     display: flex;
     min-height: 90vh;
   }
+  /* .complete{
+    background-image: url(https://media4.giphy.com/media/4ilFRqgbzbx4c/giphy.gif); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+     } */
+  .reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15%;
+  }
   .login {
     color: white;
     background:#136a8a;

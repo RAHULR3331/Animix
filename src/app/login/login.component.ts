@@ -18,12 +18,12 @@ export class LoginComponent implements OnInit { //3rd execute
   aim = "Your perfect bannking partner"
 
   account = "Enter you account here"
-  acno=""
+  email=""
   pswd=""
 
   //login model
   loginForm = this.fb.group({
-    acno: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+    email: ['', [Validators.required, Validators.pattern('[a-z A-Z 0-9 @.]*')]],
     pswd: ['', [Validators.required, Validators.pattern('[a-z A-Z 0-9 !@#]*')]]
   })
   
@@ -42,10 +42,10 @@ export class LoginComponent implements OnInit { //3rd execute
     //its a life cycle hooks of angular
     //when the component is created at same time it will initialize or authorize
   }
-  acnoChange(event: any) {
+  emailChange(event: any) {
     console.log(event);
-    this.acno=event.target.value;
-    console.log(this.acno);
+    this.email=event.target.value;
+    console.log(this.email);
 
   }
   pswdChange(event:any){
@@ -54,14 +54,14 @@ export class LoginComponent implements OnInit { //3rd execute
     console.log(this.pswd)
   }
   login(){
-    var acno=this.loginForm.value.acno;
+    var email=this.loginForm.value.email;
     var pswd=this.loginForm.value.pswd;
 
     if(this.loginForm.valid){
-      this.ds.login(acno,pswd)
+      this.ds.login(email,pswd)
       .subscribe((result:any)=>{
         localStorage.setItem('currentUser',JSON.stringify(result.currentUser));
-        localStorage.setItem('currentAcno',JSON.stringify(result.currentAcno));
+        localStorage.setItem('currentemail',JSON.stringify(result.currentemail));
         localStorage.setItem('token',JSON.stringify(result.token));
         alert(result.message);
         this.router.navigateByUrl('dashboard')

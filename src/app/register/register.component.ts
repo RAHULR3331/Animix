@@ -20,15 +20,15 @@ import {
 })
 export class RegisterComponent implements OnInit {
   uname = "";
-  acno = "";
+  email = "";
   pswd = "";
 
 
   constructor(private fb: FormBuilder, private ds: DataService, private router: Router) {}
   //Registration model
   registerForm = this.fb.group({
-    uname: ['', [Validators.required, Validators.pattern('[a-z A-Z]*')]],
-    acno: ['', [Validators.required, Validators.pattern('[0-9 ]*')]],
+    uname: ['', [Validators.required, Validators.pattern('[a-z A-Z 0-9 @]*')]],
+    email: ['', [Validators.required, Validators.pattern('[a-z A-Z 0-9 @.]*')]],
     pswd: ['', [Validators.required, Validators.pattern('[a-z A-Z 0-9 !@#]*')]]
   })
 
@@ -41,12 +41,12 @@ export class RegisterComponent implements OnInit {
     //alert("register clicked")
   
     var uname = this.registerForm.value.uname;
-    var acno = this.registerForm.value.acno;
+    var email = this.registerForm.value.email;
     var pswd = this.registerForm.value.pswd;
     if (this.registerForm.valid) {
 
       console.log(this.registerForm.get('uname')?.errors)
-      this.ds.register(acno,uname,pswd)
+      this.ds.register(email,uname,pswd)
       .subscribe((result:any)=>{
         alert(result.message);
         this.router.navigateByUrl('')

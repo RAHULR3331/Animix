@@ -9,6 +9,7 @@ import { ApiService } from '../api.service';
 export class HeaderComponent implements OnInit {
   
   user='';
+  cartcount:number=0;
   constructor(private api:ApiService) {
     if(localStorage.getItem('currentUser')){
       this.user=JSON.parse(localStorage.getItem('currentUser')||'')

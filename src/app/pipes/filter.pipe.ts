@@ -13,14 +13,16 @@ export class FilterPipe implements PipeTransform {
   }
 
   //Search 
-  allanime.forEach((anime: any) => {
-    if (anime[propname].trim().toLowerCase().includes(searchkey.toLowerCase())) {
-      result.push(anime)
+  allanime.forEach((animie: any) => {
+    if (animie[propname].trim().toLowerCase().includes(searchkey.toLowerCase())) {
+      result.push(animie)
 
 
     }
   })
   return result;
 }
+
+
 
 }

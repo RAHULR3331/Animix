@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DescriptionComponent } from './description/description.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
@@ -22,6 +23,9 @@ const routes: Routes = [
   },
   {
     path:'watchlist',component:WatchListComponent
+  },
+  { 
+    path: 'description', component: DescriptionComponent
   },
   { 
     path: '**', component: PageNotFoundComponent

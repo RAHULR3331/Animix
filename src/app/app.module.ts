@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WatchListComponent } from './watch-list/watch-list.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { DescriptionComponent } from './description/description.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     FooterComponent,
     PageNotFoundComponent,
     WatchListComponent,
-    FilterPipe
+    FilterPipe,
+    DescriptionComponent
   ],
   imports: [
     BrowserModule,

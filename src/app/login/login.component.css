@@ -1,9 +1,20 @@
 body {
-    background-image: url(https://media4.giphy.com/media/4ilFRqgbzbx4c/giphy.gif);
-    background: #ABCDEF;
+    /* backgr ound: #ABCDEF; */
     font-family: Assistant, sans-serif;
     display: flex;
     min-height: 90vh;
+  }
+  /* .complete{
+    background-image: url(https://media3.giphy.com/media/dyjrpqaUVqCELGuQVr/giphy.gif); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+     } */
+
+  .log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15%;
   }
   .login {
     color: white;

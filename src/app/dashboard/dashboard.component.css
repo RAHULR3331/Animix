@@ -9,6 +9,7 @@ html {
 	font-family: "Montserrat", sans-serif;
 	width: 100%;
 }
+
 .container {
 	padding-bottom: 3rem;
 }
@@ -81,3 +82,9 @@ img {
 		margin-bottom: 7rem;
 	}
 }
+.card{
+ background-color: #bcab7f;
+}
+
+
+
