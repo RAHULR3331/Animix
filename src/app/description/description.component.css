@@ -1,235 +1,253 @@
-/* @import "compass"; */
- @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
- @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,300italic,400italic,600italic,700italic,800italic);
- body {
-	 background: linear-gradient(rgba(30, 27, 38, 0.95), rgba(30, 27, 38, 0.95)), url("https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg");
-	 background-position: center;
-	 background-size: cover;
-	 background-repeat: repeat;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+ @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+ @media (max-width: 768px) {
+	 .container {
+		 width: 250px !important;
+		 height: 950px !important;
+		 overflow: hidden;
+	}
+	 .container .about-movie {
+		 display: inline-block !important;
+	}
+	 .container .about-movie p {
+		 width: 49% !important;
+		 padding-left: 15px;
+		 padding-right: 15px;
+	}
 }
- .container {
+ .movie-card {
+	 font: 14px/22px "Lato", Arial, sans-serif;
+	 color: #a9a8a3;
+	 padding: 40px 0;
+}
+ .movie-card .container {
+	 margin: 0 auto;
+	 width: 680px;
+	 height: 640px;
+	 background: #585846;
+	 border-radius: 5px;
+	 position: relative;
+}
+ .movie-card .container a img {
+	 max-width: 550px;
+	 max-height: 250px;
+}
+ .movie-card .container .back-cover {
+	 height: 342px;
+	 margin: 0;
+	 position: relative;
+	 overflow: hidden;
+	 z-index: 1;
+	 border-top-left-radius: 5px;
+	 border-top-right-radius: 5px;
+}
+ .movie-card .container .back-cover:before {
+	 content: " ";
 	 width: 100%;
 	 height: 100%;
-}
- .cellphone-container {
-	 width: 375px;
-	 height: 650px;
-	 background-color: #1e1b26;
-	 margin: 60px auto 0 auto;
-	 box-shadow: 5px 5px 115px -14px black;
-	 border-radius: 4px;
-}
- .menu {
 	 position: absolute;
-	 right: 12px;
-	 top: 6px;
-	 z-index: 999;
-}
- .menu i {
-	 font-size: 40px;
-	 color: #fe4141;
-	 filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, .5));
-}
- .movie-img {
-	 width: 100%;
-	 height: 200px;
-	 background-image: url(https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg);
-	 background-position: center;
+	 top: 0;
+	 left: 0;
+	 background: url("http://laughingsquid.com/wp-content/uploads/bbillo2.jpg");
+	 z-index: -1;
 	 background-repeat: no-repeat;
 	 background-size: cover;
-	 z-index: 111 !important;
-	 border-top-left-radius: 4px;
-	 border-top-right-radius: 4px;
-	 -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 1)), color-stop(0.35, rgba(0, 0, 0, 1)), color-stop(0.5, rgba(0, 0, 0, 1)), color-stop(0.65, rgba(0, 0, 0, 1)), color-stop(0.85, rgba(0, 0, 0, 0.6)), color-stop(1, rgba(0, 0, 0, 0)));
-	 position: relative;
+	 transform: skewY(-3.2deg);
+	 transform-origin: 0 0;
 }
- .movie {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+39,1e1b26+53&0+38,1+55 */
-	 background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.06) 39%, rgba(30, 27, 38, 0.88) 53%, rgba(30, 27, 38, 1) 55%);
-	/* FF3.6-15 */
-	 background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.06) 39%, rgba(30, 27, 38, 0.88) 53%, rgba(30, 27, 38, 1) 55%);
-	/* Chrome10-25,Safari5.1-6 */
-	 background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 38%, rgba(255, 255, 255, 0.06) 39%, rgba(30, 27, 38, 0.88) 53%, rgba(30, 27, 38, 1) 55%);
-	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#1e1b26',GradientType=0);
-	/* IE6-9 */
+ .movie-card .container .cover {
 	 position: absolute;
-	 background-size: contain;
-	 background-size: cover;
-	 z-index: 1 !important;
-	 width: 375px;
-	 height: 660px;
-	 display: block;
-	 border-radius: 4px;
+	 top: 160px;
+	 left: 40px;
+	 z-index: 2;
 }
- .text-movie-cont {
-	 padding: 0px 12px;
-	 text-align: justify;
+ .movie-card .container .cover:hover {
+	 opacity: 0.9;
+	 cursor: pointer;
 }
- .action-btn {
-	 text-align: right;
+ .movie-card .container .details {
+	 padding: 238px 0 0 268px;
 }
- .action-btn i {
-	 color: #fe4141;
-	 font-size: 28px;
-	 text-align: right;
+ .movie-card .container .details .title1 {
+	 color: #eee;
+	 font-size: 44px;
+	 margin-bottom: 16px;
+	 position: relative;
 }
- .watch-btn {
-	 display: block;
-	 border: 1px solid #fe4141;
+ .movie-card .container .details .title1 span {
+	 position: absolute;
+	 top: 3px;
+	 margin-left: 12px;
+	 background: #c4af3d;
 	 border-radius: 5px;
-	 padding: 4px;
-	 width: 140px;
-}
- .watch-btn h3 i {
+	 color: #544c21;
 	 font-size: 14px;
-	 margin-right: 2px;
-	 position: relative;
-	 float: left;
-	 line-height: 1;
+	 padding: 0px 4px;
 }
- .action-row {
-	 margin-top: 24px;
-}
- .summary-row {
-	 margin-top: 12px;
-}
-/* TYPOGRAPHY STARTS */
-/* Fonts */
- h1, h2, h3, h4, h5 {
-	 font-family: 'Montserrat', sans-serif;
-	 color: #e7e7e7;
-	 margin: 0px;
-}
- h1 {
-	 font-size: 36px;
-	 font-weight: 400;
-}
- h3 {
-	 font-size: 14px;
-	 font-weight: 400;
-	 color: #fe4141;
-}
- h5 {
-	 font-size: 12px;
-	 font-weight: 400;
-}
- .movie-gen, .movie-likes {
-	 margin: 0px;
-	 padding: 0px;
-}
- .movie-gen li, .movie-likes li {
-	 font-family: 'Open Sans', sans-serif;
-	 font-size: 12px;
-	 color: #818181;
-	 width: auto;
-	 display: block;
-	 float: left;
-	 margin-right: 6px;
+ .movie-card .container .title2 {
+	 color: white;
+	 font-size: 15px;
 	 font-weight: 600;
+	 margin-bottom: 15px;
 }
- .movie-likes {
-	 float: right;
+ .movie-card .container .likes {
+	 margin-left: 30px;
+	 display: inline-block;
+	 padding-bottom: 19px;
 }
- .movie-likes li {
-	 color: #fe4141;
-}
- .movie-likes li:last-child {
-	 margin-right: 0px;
-}
- .movie-likes li i {
-	 font-size: 14px;
-	 margin-right: 4px;
+ .movie-card .container .likes:before {
+	 content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
 	 position: relative;
+	 top: 2px;
+	 padding-right: 7px;
+}
+ .movie-card .container .about-movie {
+	 display: inline-flex;
+	 bottom: 0px;
+	 height: 200px;
+	 font-size: 16px;
+	 line-height: 26px;
+	 color: #b1b0ac;
+}
+ .movie-card .container .about-movie .colum-one {
+	 padding-left: 50px;
+	 padding-top: 90px;
+	 width: 220px;
 	 float: left;
-	 line-height: 1;
+	 text-align: left;
 }
- .movie-details {
-	 font-family: 'Open Sans', sans-serif;
-	 font-size: 12px;
-	 font-weight: 300;
-	 color: #b4b4b4;
+ .movie-card .container .about-movie .colum-one .colum-catogary {
+	 text-align: left;
+	 margin-left: -20px;
 }
- .movie-description {
-	 font-family: 'Open Sans', sans-serif;
-	 font-size: 12px;
-	 font-weight: 400;
-	 color: #9b9b9b;
-	 text-align: justify;
-	 line-height: 1.3;
+ .movie-card .container .about-movie .colum-one .colum-catogary span {
+	 padding: 1px 8px;
+	 font-size: 14px;
+	 background: white;
+	 border-radius: 10px;
+	 margin-left: 2px;
 }
- .movie-actors {
-	 font-family: 'Open Sans', sans-serif;
-	 font-size: 12px;
-	 font-weight: 300;
-	 color: #e7e7e7;
-	 font-style: italic;
+ .movie-card .container .about-movie .colum-one .colum-catogary span:hover {
+	 background: #999;
+	 color: white;
+	 cursor: pointer;
 }
-/* TYPOGRAPHY ENDS */
-/** GRID STARTS **/
- .thegrid {
-	 margin: 0 auto;
+ .movie-card .container .about-movie .colum-second {
+	 padding-left: 38px;
+	 padding-top: 21px;
+	 margin-left: -39px;
+	 width: 480px;
+	 float: left;
 }
- .elements-distance, .movie-details, .movie-description, .movie-actors {
-	 margin: 0px;
+ .movie-card .container .about-movie .colum-second p {
+	 width: 76%;
 }
- .mr-grid {
+ .movie-card .container .about-movie .colum-second p a {
+	 text-decoration: none;
+	 color: #6e6ed8;
+}
+/*start rate system style */
+ fieldset {
+	 border-color: #fff;
+	 border-style: none;
+}
+ .starRating {
+	 margin-left: -22px;
+}
+ .starRating > * {
+	 float: left;
+}
+/* some animtion do when load window */
+ @-webkit-keyframes pulse {
+	 50% {
+		 color: #5e5e5e;
+		 text-shadow: 0 0 15px #777;
+	}
+}
+ @keyframes pulse {
+	 50% {
+		 color: #5e5e5e;
+		 text-shadow: 0 0 15px #777;
+	}
+}
+ .starRating label {
+	 height: 40px;
+	 width: 15%;
+	 position: relative;
+	 cursor: pointer;
+}
+ .starRatinglabel:nth-of-type(5):after {
+	 -webkit-animation-delay: 0.25s;
+	 animation-delay: 0.25s;
+}
+ .starRating label:nth-of-type(4):after {
+	 -webkit-animation-delay: 0.2s;
+	 animation-delay: 0.2s;
+}
+ .starRating label:nth-of-type(3):after {
+	 -webkit-animation-delay: 0.15s;
+	 animation-delay: 0.15s;
+}
+ .starRating label:nth-of-type(2):after {
+	 -webkit-animation-delay: 0.1s;
+	 animation-delay: 0.1s;
+}
+ .starRating label:nth-of-type(1):after {
+	 -webkit-animation-delay: 0.05s;
+	 animation-delay: 0.05s;
+}
+ .starRating label:after {
+	 -webkit-transition: all 0.4s ease-out;
+	 transition: all 0.4s ease-out;
+	 position: absolute;
+	 content: "☆";
+	 color: #444;
+	 top: 0;
+	 left: 0;
 	 width: 100%;
+	 height: 100%;
+	 text-align: center;
+	 font-size: 40px;
+	 -webkit-animation: 1s pulse ease;
+	 animation: 1s pulse ease;
 }
- .mr-grid:before, .mr-grid:after {
-	 content: "";
-	 display: table;
+ .starRating label:hover:after {
+	 color: #5e5e5e;
+	 text-shadow: 0 0 15px #5e5e5e;
 }
- .mr-grid:after {
-	 clear: both;
+ .starRating input {
+	 display: none;
 }
- .mr-grid {
-	 *zoom: 1;
+/* " +" This will only work on IE7 or above. In IE6, the style will not be applied to any elements so used "~ " this meaning select any element after the input radio button show http://jsfiddle.net/7c05m7tv/ https://css-tricks.com/almanac/selectors/a/adjacent-sibling/ http://jsfiddle.net/7c05m7tv/70/ */
+ .starRating input:checked + label:after, .starRating input:checked ~ label:after {
+	 content: "★";
+	 color: #f9bf3b;
+	 text-shadow: 0 0 20px #f9bf3b;
 }
- .col1, .col2, .col3, .col3rest, .col4, .col4rest, .col5, .col5rest, .col6, .col6rest {
-	 margin: 0% 0.5% 0.5% 0.5%;
-	 padding: 1%;
+ .myName {
+	 position: absolute;
+	 top: 1em;
+	 left: 1em;
+	 padding: 5px 15px;
+	 color: #fff;
+	 font-family: arial;
+	 width: 30%;
+}
+ .myName a {
+	 color: #fff;
+	 text-decoration: none;
+	 font-size: 1.3em;
+	 font-weight: normal;
 	 float: left;
-	 display: block;
+	 margin-top: 3%;
+	 margin-left: 3%;
 }
-/* Columns match, minus margin sum. E.G. margin-left+margin-right=1%, col2=50%-1% - added padding:1%*/
- .col1 {
-	 width: 98%;
+ .myName a:hover {
+	 text-decoration: underline;
 }
- .col2 {
-	 width: 47%;
-}
- .col3 {
-	 width: 30.3333333333%;
-}
- .col4 {
-	 width: 22%;
-}
- .col5 {
-	 width: 17%;
-}
- .col6 {
-	 width: 13.6666666667%;
-}
-/* Columns match with their individual number. E.G. col3+col3rest=full width row */
- .col3rest {
-	 width: 63.6666666667%;
-}
- .col4rest {
-	 width: 72%;
-}
- .col5rest {
-	 width: 77%;
-}
- .col6rest {
-	 width: 80.3333333333%;
-}
- .dribbble-link {
+ .myName img {
 	 width: 50px;
-	 height: 50px;
-	 position: fixed;
-	 bottom: 15px;
-	 right: 15px;
-	 border-radius: 50px;
+	 border-radius: 50%;
+	 float: left;
 }
  

@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WatchListComponent } from './watch-list/watch-list.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { DescriptionComponent } from './description/description.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DescriptionComponent } from './description/description.component';
     PageNotFoundComponent,
     WatchListComponent,
     FilterPipe,
-    DescriptionComponent
+    DescriptionComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,

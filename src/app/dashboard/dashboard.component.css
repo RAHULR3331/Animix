@@ -1,90 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
 
-body,
-html {
-	background: #000000;
-	padding: 0;
-	margin: 0;
-	padding-bottom: 6rem;
-	font-family: "Montserrat", sans-serif;
-	width: 100%;
+.card {
+    width: clamp(150px, 95vw, 250px);
+    box-shadow: 0 0 .5rem rgba(255, 0, 0, 1);
+    outline: 2px solid rgba(255, 0, 0, .6);
+    overflow: hidden;
+    color: #fff;
+    cursor: pointer;
+    border-radius: .5rem;
 }
-
-.container {
-	padding-bottom: 3rem;
+.img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transition: 200ms ease-in-out transform;
 }
-.top{
-	height: 10%;
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-img {
-	/* -webkit-box-reflect: below 5px
-		linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4)); */
-	-webkit-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+.img::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(to top, #151515, transparent);
 }
-.container img:hover {
-	-webkit-transform: scale(1.1);
-	-ms-transform: scale(1.1);
-	transform: scale(1.1);
+.info {
+    padding: 2rem 1rem 1rem;
 }
-.last {
-	margin-top: 6.5rem;
+.info h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
 }
-.featured_wrapper {
-	position: relative;
+.single-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .8rem;
+    margin: .2rem 0;
 }
-.featured_wrapper img {
-    object-fit: contain;
-	width: 1000px;
-	height: 100vh;
-	-o-object-fit: cover;
-	object-fit: cover;
-	-o-object-position: top;
-	object-position: top;
+.card:hover .img {
+    transform: scale(1.1);
 }
-.title_wrapper {
-	position: absolute;
-	width: 100%;
-	left: 2rem;
-	bottom: 2rem;
-	padding: 20px 40px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.title_wrapper h1 {
-	width: 70%;
-}
-.button1 {
-	background: #f40612 !important;
-	color: rgb(255, 255, 255) !important;
-	font-size: 18px;
-	padding: 0.5rem 3rem;
-	outline: none;
-	border: 0 !important;
-}
-@media (max-width: 768px) {
-	.title_wrapper {
-		text-align: center;
-		left: 0;
-	}
-	.title_wrapper h1 {
-		font-size: 32px !important;
-		width: 100%;
-	}
-	.container {
-		padding: 20px;
-	}
-}
-@media (max-width: 480px) {
-	.column.is-one-quarter img {
-		width: 100%;
-		margin-bottom: 7rem;
-	}
-}
-.card{
- background-color: #bcab7f;
-}
-
-
-
